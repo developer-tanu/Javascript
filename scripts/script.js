@@ -8,3 +8,6 @@ const result = 3 + num;
 const num = 15;
 document.write(num);
 alert(result);
+//single line 
+let name="'hello'";
+document.write(name);
