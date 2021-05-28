@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This  is paragraph 1</p>
+    <p>This  is paragraph 2</p>
+    <p>This  is paragraph 3</p>
+    <p>This  is paragraph 4</p>
+    <p>This  is paragraph 5</p>
+    <br>
+    <button onclick=changeStyling()>click me</button>
+    <script>
+    function changeStyling()
+    {
+       let para = document.getElementsByTagName("p");
+    //    alert("jbecj");
+    //    para[0].style.color="blue";
+    //    para[1].style.color="red";
+    //    para[2].style.color="yellow";
+    //    para[3].style.color="pink";
+    //    para[4].style.color="green";
+    for(let i=0;i<=para.length;i++)
+    {
+        para[i].style.fontStyle="italic";
+    }
+       
+
+    }
+    </script>
+    
+</body>
+</html>

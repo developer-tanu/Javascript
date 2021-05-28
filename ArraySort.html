@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArraySort</title>
+</head>
+<body>
+  <script>
+      //sort
+       let array=['d','a','c','b'];
+       console.log(array.sort());
+       //reverse
+       console.log(array.reverse());
+       //sorting in string num
+       let points = ["40", "100", "1", "5", "25", "10"];
+       console.log(points.sort());
+       //sorting in num solved in inc order
+       let point = [40, 100, 1, 5, 25, 10];
+       console.log(point.sort(function(a,b)
+       {
+           return(a-b)
+       }));
+       //dec order by reverse
+       console.log(point.reverse());
+       //find highest
+       console.log(point[0]);
+       console.log(point[5]); //or 
+      console.log(point[point.length-1]);
+       
+       //random
+       console.log(point.sort(function(a,b)
+       {
+       return(0.5-Math.random());
+       }))
+       
+  </script>  
+</body>
+</html>

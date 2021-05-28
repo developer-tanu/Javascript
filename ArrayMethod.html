@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_Method</title>
+</head>
+<body>
+    <script>
+        let companies=['Microsoft','google','softobiz','capgemini','wipro'];
+        console.log(companies);
+        //to string
+        console.log(companies.toString());
+        //to push
+        console.log(companies.push('infosys'));
+        console.log(companies);
+        //to pop
+        console.log(companies.pop('infosys'));
+        console.log(companies);
+        //shift
+        console.log(companies.shift());
+        console.log(companies);
+        //unshift
+        console.log(companies.unshift('infosys'));
+        console.log(companies);
+        //join
+        console.log(companies.join('*'));
+      //change
+      console.log(companies[1]="IBM");
+      console.log(companies);
+      //splice
+      console.log(companies.splice(3,0,"Amazon"));
+      console.log(companies);
+      //concat
+      let Arr1=["Tcs","Cognizant","Accenture"];
+      console.log(companies.concat(Arr1));
+      //slice
+      console.log(companies.slice(1));
+      console.log(companies);
+      console.log(companies.slice(1,4));
+      
+
+
+
+
+
+    </script>
+</body>
+</html>

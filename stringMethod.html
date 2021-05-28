@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method</title>
+</head>
+<body>
+   <script>
+       //for string lenght
+       let strLen="check my string length";
+       document.write(strLen.length);
+       document.write('<br>');
+       //for checking index starts from 0
+       document.write(strLen.indexOf('l'));
+       document.write('<br>');
+       document.write(strLen.indexOf('string'));
+       document.write('<br>');
+       //last indexof starts from end 
+       document.write(strLen.lastIndexOf('e'));
+       document.write('<br>');
+       //return -1 if text not here in string 
+       document.write(strLen.lastIndexOf('a'));
+       document.write('<br>')
+       //take 2 parameters for search 
+       document.write(strLen.lastIndexOf('e',15))
+       //search for string
+       document.write('<br>')
+       document.write(strLen.search('my'));
+       //extract string
+       document.write('<br>')
+       document.write(strLen.slice(7,17));
+       document.write('<br>')
+       document.write(strLen.slice(7));
+       //substring not take negative 
+       document.write('<br>')
+       document.write(strLen.substring(-8));
+       //substr
+       document.write('<br>')
+       document.write(strLen.substr(7,3));
+       //replace
+       document.write('<br>');
+       let str ="hello plz visit world";
+       document.write(str.replace('world','softobiz'));
+       document.write('<br>');
+       //case insenstive
+       let revalue = "Please visit world!";
+        document.write(revalue.replace(/WORLD/i, "Softobiz"));
+        //replace occurence everywhere
+        document.write('<br>');
+        let val="hello softobiz yes you are best company softobiz";
+        document.write(val.replace(/softobiz/g,'Microsoft'));
+       //uppercase
+       document.write('<br>');
+       document.write(strLen.toUpperCase());
+       //lower
+       document.write('<br>');
+       document.write(strLen.toLowerCase());
+       //concat
+       document.write('<br>');
+       let str1="hello";
+       let str2="softobiz";
+       let plus=str1.concat(' ',str2);
+       document.write(plus);
+      //trim remove white spaces
+      let remove = "       Hello softobiz!        ";
+      alert(remove.trim());
+      //padding
+      document.write('<br>');
+      let strAdd = "7";
+      document.write(strAdd.padStart(7,0));
+      //padding end
+      document.write('<br>');
+      let strEnd = "7";
+      document.write(strEnd.padEnd(7,0));
+      //charAT
+      let char = "hi Softobiz";
+      document.write('<br>');
+      document.write(char.charAt('4'));
+      //chrCodeAt
+      let code="AaBbCcDd";
+      document.write('<br>');
+      document.write(code.charCodeAt('0'));
+      document.write(code.charCodeAt('1'));
+      document.write(code.charCodeAt('2'));
+      document.write(code.charCodeAt('3'));
+      //property acccess
+      document.write('<br>');
+      let string = "HELLO WORLD";
+      string[0] = "A";             // Gives no error, but does not work
+      string[0]; 
+      //convert array into string
+      document.write('<br>');
+      let arr=a,b,c,d;
+      document.write(arr.split('|'));
+      document.write(arr[0]);
+
+
+   </script> 
+</body>
+</html>

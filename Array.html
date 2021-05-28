@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        let array=['html','css','js','ts'];
+        console.log(array);// whole array
+        console.log(array[3]);// js
+        //change array
+        console.log(array[3]='react');
+        console.log(array);// whole new array
+        console.log(typeof array);//  array object
+        console.log(array.length);// whole array length
+        console.log(array.sort());// whole array in sort format
+        for(i=0;i<array.length;i++)
+        {
+            document.write(array[i]);
+            document.write('<br>');
+        }
+        //adding element
+        array.push("php");
+        console.log(array);
+        //by length
+        array[array.length]="laravel";
+        console.log(array);
+        //add at index
+        array[6]="java";
+        console.log(array);
+        console.log(Array.isArray(array));
+        console.log(array instanceof Array );
+        //array to string
+        console.log(array.toString());
+        //join
+        console.log(array.join("*"))
+    </script>
+</body>
+</html>

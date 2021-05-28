@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number Method</title>
+</head>
+<body>
+    <script>
+        //toString
+        let num=111;
+        console.log(num.toString());
+       console.log((111).toString());
+       console.log((100 + 11).toString());
+       //toFixed
+       let x= 7.8322;
+       console.log(x.toFixed(0));
+       console.log(x.toFixed(2));
+       console.log(x.toFixed(4));
+       //toPrecision
+       let a = 9.3534;
+       console.log(a.valueOf());
+       console.log(a.toPrecision());
+    //    console.log(a.toPrecision(0));
+    //    console.log(a.toPrecision(2));
+    //    console.log(a.toPrecision(4));
+       //Number() can be used to convert JavaScript variables to numbers:
+       console.log(Number(true));
+       console.log(Number(false));
+       console.log(Number("10 "));
+       console.log(Number("10"));
+       console.log(Number("tanu"));
+       console.log(Number(""));
+       console.log(Number(new Date("2021-05-27")));
+       //parseInt
+       console.log(parseInt("10 10"));
+       console.log(parseInt("10 hello"));
+       console.log(parseInt("10.56"));
+       //parseFloat
+       console.log(parseFloat("10.323"));
+       console.log(parseFloat("10.5 years"));
+       console.log(parseFloat("10 years"));
+       //max value
+       console.log(Number.MAX_VALUE);
+       //min value
+       console.log(Number.MIN_VALUE);
+
+
+    </script>
+    
+</body>
+</html>

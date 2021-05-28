@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+</head>
+<body>
+    <script>
+        let num = 544321;
+        console.log(num);
+        console.log('<br>');
+        let float = 5.4443;
+        console.log(float);
+        console.log('<br>');
+        //print a number
+        let val1= 5;
+        let val2 =4;
+        let result = val1 + val2;
+        console.log(result);
+        //print concatenation
+        let num1=50;
+        let num2="30";
+        let res = num1 + num2;
+        console.log(res);
+        //print concatenation in string
+        let n1="40";
+        let n2= 70;
+        let final = n1+n2;
+        console.log(final);
+        //oops mistake
+        let x = 10;
+        let y = 20;
+        let z = "The result is: " +x + y;
+        console.log(z);
+        //again
+        let a = 10;
+        let b = 20;
+        let c = "30";
+        let check = a + b + c;
+        console.log(check);
+        //problem with +
+        let v1="12";
+        let v2="2";
+        let v3= v1 * v2;
+        let v4= v1 - v2;
+        let v5= v1/v2;
+        let v6 = v1 + v2;//not work
+        console.log(v3);
+        console.log(v4);
+        console.log(v5);
+        console.log(v6);
+        //NaN
+        let number=10/'apple';
+        console.log(isNaN(number));//return true
+        console.log(number);
+        let Number=100/"100";
+        console.log(isNaN(Number));//return true
+        console.log(Number);
+        console.log(typeof NaN);
+        //infinity
+        let infinite = 2/0;
+        console.log(infinite);
+        console.log(typeof Infinity);
+        //objects
+        let m = 123;
+        // let n = new Number('123');
+        console.log(typeof m);
+    </script>
+</body>
+</html>
