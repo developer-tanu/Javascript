@@ -1,0 +1,29 @@
+Task 1: replace alais with name
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     const a = ['First Name', 'Age'];
+const b = {'name': 'john', 'age': 18};
+const replaceKeys = (a, b) => {
+   const keys = Object.keys(b);
+   const res = {};
+   for(let k in a){
+      res[a[k]] = b[keys[k]];
+      b[a[k]] = b[keys[k]];
+      delete b[keys[k]];
+   };
+};
+replaceKeys(a,b);
+console.log(b);
+
+    </script>
+</body>
+</html>

@@ -5,4 +5,4 @@ function myFunction(index,value,array)
 {
    return value>18;
 }
-myFunction();
+// myFunction();
