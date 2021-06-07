@@ -10,21 +10,26 @@
 <body>
    <script>
        const a =[10, 12, 2, 6, 2, 4, 3, 10, 13, 15, 12, 6, 4];
-       
+       const c=[];
        const len=a.length;
         for(let i=0;i<len;i++)
         {
-            // console.log(a[i]);
             for(let j=i+1;j<len;j++)
             {
+               
                 if(a[i]==a[j])
                 {
                     //a[i]=0;
                      a[j]=0;
+                    
+
+                     
                 }
             }
         }
-     console.log(a);
+      c.push(a);
+     console.log(c);
+
    </script> 
 </body>
 </html>

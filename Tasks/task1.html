@@ -1,5 +1,3 @@
-Task 1: replace alais with name
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,20 +8,37 @@ Task 1: replace alais with name
 </head>
 <body>
     <script>
-     const a = ['First Name', 'Age'];
-const b = {'name': 'john', 'age': 18};
-const replaceKeys = (a, b) => {
-   const keys = Object.keys(b);
-   const res = {};
-   for(let k in a){
-      res[a[k]] = b[keys[k]];
-      b[a[k]] = b[keys[k]];
-      delete b[keys[k]];
-   };
-};
-replaceKeys(a,b);
-console.log(b);
-
-    </script>
+            const a = [
+      {name: 'first_name', alais: 'First Name', type: 'string'},
+      {name: 'age', alais: 'Age', type: 'number'}
+    ];
+ 
+    const b = [
+      {first_name: 'John', age: 23},
+      {first_name: 'Tom', age: 25}
+    ]; 
+ 
+    const len = b.length;
+    const c = [];
+ 
+    for (let i=0;i<len;i++) {
+      let d = a[0].alais + ": " + b[i].first_name + ", " + a[1].alais + ": " + b[i].age;
+      let string = d; 
+      console.log(d)
+      let pass = string.replace(',',':');
+      console.log(pass)
+      let arr = pass.split(':');
+      let empty = {};
+      arr.forEach(function(el,i) {
+        let b = i + 1, c = b/2, e = c.toString();
+        if(e.indexOf('.') != -1 ) {
+          empty[el] = arr[i+1];
+        } 
+      }); 
+    c.push(empty);
+          
+    }
+console.log(c);
+</script>
 </body>
 </html>
