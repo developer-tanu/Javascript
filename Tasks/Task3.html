@@ -19,7 +19,7 @@
         <option value="8" id="8">8</option>
         <option value="9" id="9">9</option>
     </select>
-
+<button onclick="myFunc()">click me</button>
 
 <script>
 const a = [
@@ -34,7 +34,48 @@ const a = [
   {id: 9, parentId: 5},
   {id: 10, parentId: 5},
 ]
-document.getElementById("1")
+          function myFunc()
+          {
+            let propertyYouWant = "parentId";
+            let choose = document.getElementById("choice").value;
+            for(let i = 0; i < a.length; i++) {
+                //  let idYouWant = 4
+                //  console.log(idYouWant);
+                if (a[i].id == choose) {
+                     console.log(a[i][propertyYouWant])
+                    document.getElementById("choice").parentNode.nodeName= 
+                            a[i][propertyYouWant];
+                            
+                        if(a[i].id)
+                        {
+                            
+                            if(a[i].id ==1)
+                             {
+                                 console.log(["2,3,4,5,6,7,8,9"]);
+                             }
+                             else if(a[i].id == 2)
+                             {
+                                 console.log(["3,4,5,6,7,8,9"]);
+                             }
+                             else if(a[i].id == 3)
+                             {
+                                 console.log(["4,5,6,7,8,9"]);
+                             }
+                             else if(a[i].id == 4)
+                             {
+                                 console.log(["5,6,7,8,9"]);
+                             }
+                        }
+                        
+                        
+                        
+                        
+                        }
+                        
+                        
+                }
+            }
+         
  </script>   
 </body>
 </html>
