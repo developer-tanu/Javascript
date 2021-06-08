@@ -9,15 +9,16 @@
 <body>
     TYPE A NUMBER HERE:
     <select id="choice">
-        <option value="1" id="1">1</option>
-        <option value="2" id="2">2</option>
-        <option value="3" id="3">3</option>
-        <option value="4" id="4">4</option>
-        <option value="5" id="5">5</option>
-        <option value="6" id="6">6</option>
-        <option value="7" id="7">7</option>
-        <option value="8" id="8">8</option>
-        <option value="9" id="9">9</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
     </select>
 <button onclick="myFunc()">click me</button>
 
@@ -34,6 +35,7 @@ const a = [
   {id: 9, parentId: 5},
   {id: 10, parentId: 5},
 ]
+const b=[];
           function myFunc()
           {
             let propertyYouWant = "parentId";
@@ -41,41 +43,37 @@ const a = [
             for(let i = 0; i < a.length; i++) {
                 //  let idYouWant = 4
                 //  console.log(idYouWant);
-                if (a[i].id == choose) {
-                     console.log(a[i][propertyYouWant])
-                    document.getElementById("choice").parentNode.nodeName= 
+                if (a[i].id == choose) { 
+                    console.log(a[i][propertyYouWant])
+                    document.getElementById("choice").childNode= 
                             a[i][propertyYouWant];
-                            
+                         
                         if(a[i].id)
                         {
-                            
-                            if(a[i].id ==1)
-                             {
-                                 console.log(["2,3,4,5,6,7,8,9"]);
-                             }
-                             else if(a[i].id == 2)
-                             {
-                                 console.log(["3,4,5,6,7,8,9"]);
-                             }
-                             else if(a[i].id == 3)
-                             {
-                                 console.log(["4,5,6,7,8,9"]);
-                             }
-                             else if(a[i].id == 4)
-                             {
-                                 console.log(["5,6,7,8,9"]);
-                             }
+                            var b = [];
+                            for(let j=0;j<a.length;j++){
+                           
+                            if(a[i].id == a[j].id)
+                          { 
+                               
+                               var value=[a[i++].id];
+                               console.log(a[value]);
+                             
+                            }
+                             
+                          }                         
                         }
                         
                         
-                        
+                     
                         
                         }
                         
-                        
+                    }
                 }
-            }
-         
+
+                const myJSON = JSON.stringify(value);  
+                console.log(myJSON)      
  </script>   
 </body>
 </html>

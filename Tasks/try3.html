@@ -3,12 +3,13 @@
     <body>
         <h1>Geeksforgeeks</h1>
   
-        <p>Name of the id is :
+        <p>Name of the id is : 
           <span id="geeks"></span>
         </p>
   
         <script>
-            // This is our array of objects
+            
+            // This is our array of Objects
             var data = [
                 { id: 1, name: "a" },
                 { id: 2, name: "b" },
@@ -18,21 +19,32 @@
                 { id: 6, name: "f" },
             ];
   
-            let idYouWant = 4;
+            let idYouWant = 1;
             let propertyYouWant = "name";
   
-            // Iterating over the array using for loop and
-            // searching in which object the id present
-            // After getting the object we print the
-            // property we wanted from the object
+            // Using Array.filter( ) method
+            // we are iterating through each
+            // items in the array and
+            // checking which item's
+            // id value is equal to the id we want
   
-            for (var i = 0; i < data.length; i++) {
-                if (data[i].id == idYouWant) {
-                    // console.log(data[i][propertyYouWant])
-                    document.getElementById("geeks").innerText = 
-                            data[i][propertyYouWant];
-                }
+            let res = data.filter((item) => {
+                return item.id == idYouWant;
+            });
+  
+            // After using filter method we got an array
+            // of object. Now take its first element and
+            // use its 'propertyYouWant' key
+            let exactRes = res[0][propertyYouWant];
+            if(idYouWant == 1)
+            {
+                
+                
+})
             }
+  
+            // Printing the property we want
+            document.getElementById("geeks").innerText = exactRes;
         </script>
     </body>
 </html>
