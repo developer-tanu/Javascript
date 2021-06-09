@@ -20,60 +20,66 @@
         <option value="9">9</option>
         <option value="10">10</option>
     </select>
+    <p id="1"></p>
 <button onclick="myFunc()">click me</button>
-
 <script>
-const a = [
-  {id: 1, parentId: null},
-  {id: 2, parentId: 1},
-  {id: 3, parentId: 1},
-  {id: 4, parentId: 2},
-  {id: 5, parentId: 2},
-  {id: 6, parentId: 2},
-  {id: 7, parentId: 5},
-  {id: 8, parentId: 5},
-  {id: 9, parentId: 5},
-  {id: 10, parentId: 5},
-]
-const b=[];
-          function myFunc()
-          {
-            let propertyYouWant = "parentId";
-            let choose = document.getElementById("choice").value;
-            for(let i = 0; i < a.length; i++) {
-                //  let idYouWant = 4
-                //  console.log(idYouWant);
-                if (a[i].id == choose) { 
-                    console.log(a[i][propertyYouWant])
-                    document.getElementById("choice").childNode= 
-                            a[i][propertyYouWant];
-                         
-                        if(a[i].id)
-                        {
-                            var b = [];
-                            for(let j=0;j<a.length;j++){
-                           
-                            if(a[i].id == a[j].id)
-                          { 
-                               
-                               var value=[a[i++].id];
-                               console.log(a[value]);
-                             
-                            }
-                             
-                          }                         
-                        }
-                        
-                        
-                     
-                        
-                        }
-                        
-                    }
-                }
+function myFunc() { 
+ const idYouwant = document.getElementById("choice").value;
+  const a = [
+    {id: 1, parentId: null},
+    {id: 2, parentId: 1},
+    {id: 3, parentId: 1},
+    {id: 4, parentId: 2},
+    {id: 5, parentId: 2},
+    {id: 6, parentId: 2},
+    {id: 7, parentId: 5},
+    {id: 8, parentId: 5},
+    {id: 9, parentId: 5},
+    {id: 10, parentId: 5},
+  ];
 
-                const myJSON = JSON.stringify(value);  
-                console.log(myJSON)      
+  let num;
+  const b = [];
+
+
+  if (idYouwant == 1 || idYouwant == 2 || idYouwant == 5) {
+    for(let i=1;i<a.length;i++) {
+      if(a[i].parentId == idYouwant) {
+        num= a[i].id;
+        b.push(num);         
+      }
+    }
+    if (idYouwant == 1) {
+    for (let i=0;i<a.length;i++) {
+      if (a[i].parentId === 2) {
+        num = a[i].id;
+        b.push(num);
+      }
+    }
+    for (let i=0;i<a.length;i++) {
+      if (a[i].parentId === 5) {
+        num = a[i].id;
+        b.push(num);
+      }
+    }
+  }
+  else if(idYouwant == 2) {
+    for (let i=0;i<a.length;i++) {
+      if (a[i].parentId === 5) {
+        num= a[i].id;
+        b.push(num);
+      }
+    }
+  }
+}
+else {
+  num = "no child";
+  b.push(num);
+}
+// document.getElementById("1").innerHTML = b;
+console.log(b);
+}
+   
  </script>   
 </body>
 </html>
